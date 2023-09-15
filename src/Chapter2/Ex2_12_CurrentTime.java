@@ -9,13 +9,26 @@ public class Ex2_12_CurrentTime {
         long totalHours = totalMinutes / 60; //Time in total hours
 
         System.out.println(System.currentTimeMillis());
-        System.out.println(totalSeconds % 60);
-        System.out.println(totalMinutes % 60);
-        System.out.println(totalHours % 24);
+
         System.out.println("Current Time is: " + totalHours % 24 + ":" + totalMinutes % 60 + ":" + totalSeconds % 60 +
                 " GMT");
-        System.out.println("Current Time is: " + (totalHours % 24 - 4) + ":" + totalMinutes % 60 + ":" + totalSeconds % 60 +
+        System.out.println("Current Time is: " + getCurrentHour( -4) + ":" + totalMinutes % 60 + ":" + totalSeconds % 60 +
                 " EST");
 
+    }
+
+    //Creating getter methods for Ex 2.8
+    public static long getCurrentHour (int offset) {
+
+        return ((System.currentTimeMillis() / 1000 / 60 / 60) % 24) + offset;
+    }
+
+    public static long getCurrentMinute () {
+
+        return (System.currentTimeMillis() / 1000 / 60) % 60;
+    }
+    public static long getCurrentSecond () {
+
+        return (System.currentTimeMillis() / 1000) % 60;
     }
 }
