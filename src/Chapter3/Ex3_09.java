@@ -26,9 +26,9 @@ public class Ex3_09 {
                 isbn8 * 9) % 11;
 
         if (isbn10 == 10) {
-            System.out.println(isbn0 + "" + isbn1 + isbn2 + isbn3 +isbn4 + isbn5 + isbn6 + isbn7 + isbn8 + "X");
+            System.out.println("" + isbn0 + isbn1 + isbn2 + isbn3 +isbn4 + isbn5 + isbn6 + isbn7 + isbn8 + "X");
         } else {
-            System.out.println(isbn0 + "" + isbn1 + isbn2 + isbn3 +isbn4 + isbn5 + isbn6 + isbn7 + isbn8 + isbn10);
+            System.out.println("" + isbn0 + isbn1 + isbn2 + isbn3 +isbn4 + isbn5 + isbn6 + isbn7 + isbn8 + isbn10);
         }
     }
 }
